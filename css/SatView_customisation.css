@@ -1,0 +1,215 @@
+/* custom css style sheet for the top panel of SatView application */
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: rgb(134,101,95); /*#333;*/
+  background: linear-gradient(to top right, rgb(30,30,30) 0%, rgb(144,111,105) 65%);
+  font-family: Arial;
+  float: left;
+  position: relative;
+  width:100%;
+  z-index: 10;
+  margin-top: -16px;
+  }
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  padding-bottom: 0px;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  font-weight: bold;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a green background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: violet;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+  z-index: 9999910;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left; 
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* The dropdown-full container */
+.dropdown-full {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown-full button */
+.dropdown-full .dropbtn-full {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  font-weight: bold;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.dropdown-full:hover .dropbtn-full {
+  background-color: violet;
+}
+
+/* Dropdown content-full (hidden by default) */
+.dropdown-content-full {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  /*width: 50%; */
+  left: all;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 9999910;
+}
+
+/* Mega Menu header, if needed */
+.dropdown-content-full .header {
+  background: #f9f9f9;
+  padding: 16px;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-full:hover .dropdown-content-full {
+  display: block;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0px;
+  background-color: inherit;
+  height: auto;
+}
+
+/* Style links inside the columns */
+.column a {
+  float: none;
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a background color on hover */
+.column a:hover {
+  background-color: #ddd;
+}
+
+/* Style column title for padding */
+.column-title {
+  padding: 12px;
+  font-weight: bold;
+  font-size: large;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* button to disable auto refresh */
+#autorefresh {
+  font-size: 16px;
+  border: 0;
+  outline: 2;
+  color: white;
+  padding: 14px 16px;
+  font-family: Arial; /* Important for vertical align on mobile phones */
+  background: transparent;
+}
+
+/* Infobar container */
+.infobar {
+  overflow: hidden;
+  background-color: transparent; /*#333;*/
+  font-family: Arial;
+  float: left;
+  position: relative;
+  width:100%;
+  z-index: 11;
+  font-size: 11pt; 
+  color: lightgrey; 
+  text-align: right; 
+  padding: 0px;
+  transform: translateY(0px)
+  }
+
+/* timestamp div*/
+.timestamp {
+  align: center;
+  background: rgba(50,50,50,0.7);
+}
+
+/* colourpalette div*/
+.colourpalette {
+  align: left
+  background: transparent;
+  opacity: 0.7;
+}
+
+/* colourpalette div when hover */
+.colourpalette:hover {
+  align: left
+  background: transparent;
+  opacity: 1;
+}
+
+
+
+
