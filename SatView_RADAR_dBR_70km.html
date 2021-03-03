@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height:100%;
+            padding: 0;
+            margin: 0;
+            background-color: black;
+        }
+        </style>
+        <!-- SatView customisation Part1 starts here !-->
+        <title>SatView</title>
+        <link rel="icon" type="image/x-icon" href="logos/SatView_Logo_Beta.ico">
+        <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <!--<script src="js/SatView_customisation.js"></script> !-->
+        <link rel="stylesheet" href="css/SatView_customisation.css">
+        <!-- SatView customisation Part1 ends here !-->
+    </head>
+    <body>
+    <div align=center height="10%" class="timestamp" style="cursor: pointer; display: block; z-index: 99999; position: absolute; top: 12px; right:35%;">
+        <button class="dropbtn" id="autorefresh" onclick="AutoRefreshOnOff(this)">Updated at</button>
+        <iframe src=data/RADAR_dBR_70km_timestamp.html align="center" height="40" frameBorder="0"></iframe>
+        
+    </div>
+    <div id="map" style="position: absolute;">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/multi-style-layer.js"></script>
+        <script src="js/leaflet-svg-shape-markers.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="data/Coastline.js"></script>
+        <!-- <script src="data/Peatland.js"></script> !-->
+        <script src="data/FIRs.js"></script>
+        <script src="data/Singapore_FIR.js"></script>
+        <script src="data/FIR_Subsectors.js"></script>
+        <script src="data/ATS_Routes.js"></script>
+        <script src="data/Holding_Stacks.js"></script>
+        <script src="data/SIDs.js"></script>
+        <script src="data/STARs.js"></script>
+        <script src="data/Cities.js"></script>
+        <script src="data/Airports.js"></script>
+        <script src="data/Grid.js"></script>
+        <script src="data/VA.js"></script>
+        <script src="data/METAR_SPECI.js"></script>
+        <script src="data/TAF.js"></script>
+        <script src="data/LDS.js"></script>
+        <script src="data/SatSC.js"></script>
+        <script src="data/SatTSN.js"></script>
+        <script src="data/SatSCN.js"></script>
+        <script src="data/FUSIUN_Hotspots.js"></script>
+        <script src="data/FY4A_Hotspots.js"></script>
+        <script src="js/SatView_customisation.js"></script>
+        <script>
+            map.addLayer(wmsTiles);
+            map.addLayer(layer_SIDs);
+            map.addLayer(layer_STARs);
+            map.addLayer(layer_Holding_Stacks);
+            map.addLayer(layer_Coastline);
+            map.addLayer(overlay_RADAR_dBR_70km);
+            map.fitBounds([[0.5,104],[1.5,104]]);
+        </script>
+    </body>
+</html>
